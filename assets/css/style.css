@@ -596,6 +596,7 @@ main {
 }
 
 .testimonials-item-title { 
+  overflow: auto;
   margin-bottom: 7px;
 }
 
