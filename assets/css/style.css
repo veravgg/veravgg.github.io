@@ -565,6 +565,7 @@ main {
 
 .testimonials-title { 
   margin-bottom: 20px; 
+  text-align: right;
 }
 
 .testimonials-list {
