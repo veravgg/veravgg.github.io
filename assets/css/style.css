@@ -585,6 +585,7 @@ main {
 }
 
 .testimonials-avatar-box {
+  overflow: auto;
   position: absolute;
   top: 3;
   left: 0;
@@ -596,7 +597,6 @@ main {
 
 .testimonials-item-title { 
   margin-bottom: 7px;
-  left: 3;
 }
 
 .testimonials-text {
