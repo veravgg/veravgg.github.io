@@ -1,11 +1,24 @@
-<?php 
-	$nombre = $_POST['nombre'];
-	$email = $_POST['email'];
-	$asunto = 'Formulario Rellenado';
-	$mensaje = "Nombre: ".$nombre."<br> Email: $email<br> Mensaje:".$_POST['mensaje'];
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtén los datos del formulario
+    $fullname = $_POST["fullname"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
+    // Configura el destinatario y el asunto del correo
+    $to = "veragonzalez.vg@gmail.com.com";
+    $subject = "Contacto WEB";
 
-	if(mail(jorge.s.u95@gmail.com, $asunto, $mensaje)){
-		echo "Correo enviado";
-	}
- ?>
+    // Construye el contenido del correo
+    $body = "Nombre: " . $fullname . "\n";
+    $body .= "Email: " . $email . "\n";
+    $body .= "Mensaje: " . $message;
+
+    // Envía el correo
+    if (mail($to, $subject, $body)) {
+        echo "¡Gracias por tu mensaje! Se ha enviado correctamente.";
+    } else {
+        echo "Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.";
+    }
+}
+?>
